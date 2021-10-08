@@ -1,3 +1,8 @@
+/*
+Consegna: Un signore possiede 1,75$ ($ = dollaro) e 2,80£ (£ = sterline). 
+Quanto ha, in totale, in euro supposto che 1$ = 1,514€ e 1£ = 2,52€?
+*/
+
 #include <iostream>
 
 using namespace std;
