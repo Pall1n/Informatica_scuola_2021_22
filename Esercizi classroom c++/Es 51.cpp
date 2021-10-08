@@ -1,3 +1,5 @@
+//Consegna: Date le misure dei lati di un triangolo, stabilire e il triangolo è equilatero, isoscele o scaleno.
+
 #include <iostream>
 using namespace std;
 
