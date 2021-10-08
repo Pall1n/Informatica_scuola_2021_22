@@ -8,6 +8,9 @@ string verifica_triangolo(double ang1, double ang2, double ang3){
     if((ang1==90 or ang2==90 or ang3==90) && verifica_180 == 180){
         return "Il triangolo è rettangolo.";
     }
+    else if(verifica_180 != 180){
+        return "Il triangolo non può esistere.";
+    }
     else{
         return "Il triangolo non è rettangolo.";
     }
