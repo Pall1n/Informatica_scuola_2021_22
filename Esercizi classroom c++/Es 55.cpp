@@ -1,26 +1,39 @@
+//Consegna: Dati un quadrato di lato L ed una circonferenza di raggio R stabilire quale delle due figure ha perimetro maggiore e quale delle due ha area maggiore.
+
 #include <iostream>
 using namespace std;
 
-string verifica_triangolo(double lato1, double lato2, double lato3){
-    if(lato1==lato2 && lato2==lato3){
-        return "Il triangolo è equilatero.";
+void calcolo_e_verifica(double l, double r){
+    double P1 = l*4;
+    double P2 = (r*2)*3.14;
+    double A1 = l*l;
+    double A2 = (r*r)*3.14;
+    if(P1 > P2){
+        cout<<"Il quadrato ha un perimetro maggiore."<<endl;
     }
-    else if(lato1!=lato2 and lato2!=lato3 and lato1!=lato3){
-        return "Il triangolo è scaleno.";
+    else if(P2 > P1){
+        cout<<"Il cerchio ha un perimetro maggiore."<<endl;
     }
     else{
-        return "Il triangolo è isoscele.";
+        cout<<"Hanno lo stesso perimetro."<<endl;
+    }
+    if(A1 > A2){
+        cout<<"Il quadrato ha un'area maggiore.";
+    }
+    else if(A2 > A1){
+        cout<<"Il cerchio ha un'area maggiore.";
+    }
+    else{
+        cout<<"Hanno la stessa area.";
     }
 }
 
 int main(){
-    double lato1,lato2,lato3;
-    cout<<"Inserisci il primo lato: ";
-    cin>>lato1;
-    cout<<"Inserisci il secondo lato: ";
-    cin>>lato2;
-    cout<<"Inserisci il terzo lato: ";
-    cin>>lato3;
-    cout<<verifica_triangolo(lato1,lato2,lato3);
+    double l, r;
+    cout<<"Inserisci il lato del quadrato: ";
+    cin>>l;
+    cout<<"Inserisci il raggio della circonferenza: ";
+    cin>>r;
+    calcolo_e_verifica(l, r);
     return 0;
 }
