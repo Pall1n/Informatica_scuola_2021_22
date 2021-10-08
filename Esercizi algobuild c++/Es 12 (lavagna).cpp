@@ -8,10 +8,10 @@ int main()
     cin>>a;
     cout<<"Inserisci b: ";
     cin>>b;
-    if (a == b*b) {
+    if(a == b*b) {
         cout << "a è il quadrato di b.";
     }
-    else {
+    else{
         cout << "a non è il quadrato di b.";  
     }
     
