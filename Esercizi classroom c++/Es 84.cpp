@@ -22,7 +22,7 @@ int main(){
         cout<<calcolo(a,b);
     }
     else{
-        cout<<"Numeri uguali. Riprova con numeri diversi"<<endl<<endl;
+        cout<<"Numeri uguali. Riprova con numeri diversi."<<endl<<endl;
         main();
     }
     return 0;
