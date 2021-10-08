@@ -1,3 +1,5 @@
+//Consegna: Dato un numero intero N, stabilire se è pari o dispari.
+
 #include <iostream>
 
 using namespace std;
