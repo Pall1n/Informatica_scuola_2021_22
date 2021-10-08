@@ -1,3 +1,5 @@
+//Consegna: Calcolare il quadrato del successivo del doppio di un numero.
+
 #include <iostream>
 
 using namespace std;
