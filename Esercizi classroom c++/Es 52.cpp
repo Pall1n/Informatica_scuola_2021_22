@@ -4,8 +4,7 @@
 using namespace std;
 
 string verifica_triangolo(double ang1, double ang2, double ang3){
-    double somma = ang1+ang2+ang3;
-    if((ang1==90 or ang2==90 or ang3==90) && somma==180){
+    if(ang1==90 or ang2==90 or ang3==90){
         return "Il triangolo è rettangolo.";
     }
     else{
