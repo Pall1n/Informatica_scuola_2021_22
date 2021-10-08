@@ -4,14 +4,11 @@
 using namespace std;
 
 string verifica(int n){
-    if(n != 0 && 36%n == 0){
+    if(36%n == 0){
         return "Questo numero è un divisore di 36.";
     }
-    else if(n != 0 && 36%n != 0){
-        return "Questo numero non è un divisore di 36.";
-    }
     else{
-        return "Numero non valido. Riprova con un numero diverso da 0";
+        return "Questo numero non è un divisore di 36.";
     }
 }
 
@@ -19,6 +16,12 @@ int main(){
     int n;
     cout<<"Inserisci un numero: ";
     cin>>n;
-    cout<<verifica(n);
+    if(n != 0){
+        cout<<verifica(n);
+    }
+    else{
+        cout<<"Numero non valido. Riprova con un numero diverso da 0."<<endl<<endl;
+        main();
+    }
     return 0;
 }
