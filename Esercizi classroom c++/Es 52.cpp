@@ -1,3 +1,5 @@
+//Consegna: Date le misure degli angoli di un triangolo, stabilire se il triangolo è rettangolo.
+
 #include <iostream>
 using namespace std;
 
