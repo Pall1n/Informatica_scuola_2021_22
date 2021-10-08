@@ -1,3 +1,5 @@
+//Consegna: Calcolare la differenza tra il quadrato di un numero e il numero stesso.
+
 #include <iostream>
 
 using namespace std;
