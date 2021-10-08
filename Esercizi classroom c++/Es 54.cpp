@@ -1,17 +1,19 @@
+//Consegna: Date le dimensioni di due rettangoli calcolarne l'area e determinare quale dei due ha superficie maggiore.
+
 #include <iostream>
 using namespace std;
 
 string calcolo_e_verifica(double b1, double h1, double b2, double h2){
-    double A1 = (b1*h1)/2;
-    double A2 = (b2*h2)/2;
+    double A1 = b1*h1;
+    double A2 = b2*h2;
     if(A1 > A2){
-        return "Il primo triangolo ha l'area maggiore.";
+        return "Il primo rettangolo ha l'area maggiore.";
     }
     else if(A1 <A2){
-        return "Il secondo triangolo ha l'area maggiore.";
+        return "Il secondo rettangolo ha l'area maggiore.";
     }
     else{
-        return "I triangoli hanno la stessa area.";
+        return "I rettangoli hanno la stessa area.";
     }
 }
 
