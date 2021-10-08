@@ -1,3 +1,5 @@
+//Consegna: Dati importo lordo ed importo scontato, determinare la percentuale di sconto.
+
 #include <iostream>
 
 using namespace std;
