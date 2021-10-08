@@ -1,3 +1,9 @@
+/*
+Una merce subisce un certo aumento in percentuale. 
+Il negoziante però pratica ai clienti abituali uno sconto pari all'aumento. 
+Calcolate la differenza tra il nuovo prezzo scontato e il vecchio prezzo.
+*/
+
 #include <iostream>
 
 using namespace std;
