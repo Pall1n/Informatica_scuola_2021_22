@@ -1,3 +1,5 @@
+//Consegna: Dato un numero intero, trovare il suo valore assoluto.
+
 #include <iostream>
 
 using namespace std;
