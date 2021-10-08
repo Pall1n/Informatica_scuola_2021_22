@@ -1,1 +1,1 @@
-# Info_scuola
+Personal scholastic exercises
