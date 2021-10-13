@@ -6,3 +6,4 @@ Organizzazione contenuti:
 | ------------- | ------------- |
 | Algoritmi in c++ da AlgoBuild  | "Esercizi algobuild c++" |
 | Algoritmi in c++ da Classroom  | "Esercizi classroom c++" |
+| ATM | "ATM" |
