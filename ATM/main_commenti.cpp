@@ -178,7 +178,7 @@ class Atm{
         cin>>PIN;
         for(char carattere : PIN){ //Per ogmi carattere presente nella stringa digitata
             if(isdigit(carattere)) somma += carattere - '0'; //Se il carattere è un numero, lo trasformo in intero tramite un calcolo sulla tabella ASCII
-            else if(consonanti != 0) return "Nope"; //Se sono state scritte più consonanti non dà l'ok
+            else if(consonanti != 0) return "No"; //Se sono state scritte più consonanti non dà l'ok
             else{ //Se il carattere non è un numero lo assengna alla variabile consonante e indica che è stato già inserito
                 consonanti += 1;
                 consonante = carattere;
