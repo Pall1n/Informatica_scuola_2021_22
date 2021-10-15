@@ -38,6 +38,9 @@ class Atm{
         while(true){
             sleep(1);
             clear();
+            cout<<"-------------------------\n";
+            cout<<"|          ATM          |\n";
+            cout<<"------------------------\n\n";
             cout<<"Benvenuto, "<<username[i]<<", hai "<<soldi_user[i]<< "€.\n"
             "L'ATM dispone di "<<soldi_disponibili<<"€.\n\n"
             "Scegli cosa vuoi fare: \n"
