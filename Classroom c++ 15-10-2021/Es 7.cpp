@@ -20,17 +20,21 @@ void verifica(int a, int n1, int n2){
 }
 
 int main(){
-    int a,n1,n2;
-    cout<<"Inserisci un numero: ";
-    cin>>a;
-    if(a == 0){
-        cout<<"Numero non valido, riprova."<<endl;
-        main();
+    while(true){
+        int a,n1,n2;
+        cout<<"Inserisci un numero: ";
+        cin>>a;
+        cout<<"Inserisci il primo numero da verificare come dividendo: ";
+        cin>>n1;
+        cout<<"Inserisci il secondo numero da verificare come dividendo: ";
+        cin>>n2;
+        if(a == 0){
+            cout<<"Il primo numero inserito deve essere diverso da 0, riprova.\n\n";
+        }
+        else{
+            verifica(a,n1,n2);
+            break;
+        }
     }
-    cout<<"Inserisci il primo numero da verificare come dividendo: ";
-    cin>>n1;
-    cout<<"Inserisci il secondo numero da verificare come dividendo: ";
-    cin>>n2;
-    verifica(a,n1,n2);
     return 0;
 }
