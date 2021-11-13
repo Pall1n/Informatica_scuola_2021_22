@@ -46,6 +46,8 @@ string destinazioni[][10][3] = { //Massimo destinazioni per ogni partenza: 10
     }
 };
 
+int ordine_elenco = 1;
+
 class Programma{
     public:
     
@@ -59,7 +61,7 @@ class Programma{
     
     void partenze_scelta(){
         int scelta_partenza = 0;
-        while(scelta_partenza <= 0 && scelta_partenza <= length_partenze){
+        while(scelta_partenza <= 0 || scelta_partenza > length_partenze){
             cout<<"================================\n"
                   "|           PARTENZE           |\n"
                   "================================\n";
@@ -71,7 +73,7 @@ class Programma{
             cout<<"\nIndica il numero della scelta: ";
             cin>>scelta_partenza;
             
-            if(scelta_partenza <= 0 && scelta_partenza <= length_partenze){
+            if(scelta_partenza <= 0 || scelta_partenza > length_partenze){
                 cout<<"\nScelta non valida, riprova.\n";
                 sleep(2);
                 clear();
@@ -83,21 +85,21 @@ class Programma{
     
     void destinazioni_funz(int scelta_partenza){
         int scelta_destinazione = 0;
-        int ordine = 1;
-        while(scelta_destinazione <= 0 && scelta_destinazione <= length_partenze){ //sistemare giusto
+        while(scelta_destinazione <= 0 || scelta_destinazione > length_partenze){
             cout<<"====================================\n"
                   "|           DESTINAZIONI           |\n"
                   "====================================\n";
                   
             cout<<"\nQual'è la destinazione desiderata?\n";
+            ordine_elenco = 1;
             for(auto i = begin(destinazioni[scelta_partenza]); i < end(destinazioni[scelta_partenza]); i++){
-                if(*i[0] != "") cout<<ordine<<") "<<*i[0]<<endl;
-                ordine++;
+                if(*i[0] != "") cout<<ordine_elenco<<") "<<*i[0]<<endl;
+                ordine_elenco++;
             }
             cout<<"\nIndica il numero della scelta: ";
             cin>>scelta_destinazione;
             
-            if(scelta_destinazione <= 0 && scelta_destinazione <= length_partenze){
+            if(scelta_destinazione <= 0 || scelta_destinazione > length_partenze){
                 cout<<"\nScelta non valida, riprova.\n";
                 sleep(2);
                 clear();
