@@ -142,7 +142,7 @@ class Programma{
                 clear();
                 informazioni_viaggio();
             }
-            else if(scelta_home == 3) return 0;
+            else if(scelta_home == 3) exit(0);
             else{
                 cout<<"\nScelta non valida, riprova!\n";
                 sleep(1);
