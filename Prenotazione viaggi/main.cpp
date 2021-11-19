@@ -412,7 +412,7 @@ class Programma{
                 codice_viaggio += {alfabeto_controllo[totale_char%26]};
                 
                 cout<<"\nComplimenti, il pagamento è stato  effettuato!\n";
-		if(bagagli) cout<<"Dato che hai dei bagagli, per il cech-in recati allo sportello 8."<<endl;
+		if(bagagli) cout<<"Per il check-in recati allo sportello 8."<<endl;
                 cout<<"Il codice del tuo viaggio è: "<<codice_viaggio<<endl;
                 cout<<"Inserisci qualsiasi cosa per continuare: ";
                 cin>>scelta;
