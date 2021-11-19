@@ -122,7 +122,7 @@ class Programma{
             cout<<"\033[1;96m"<<"========================================\n"
                   "|          RAPISARDI AIRLINES          |\n"
                   "========================================\n\n"<<colore_reset<<
-                  "Benvenuto, fai scegli un'opzione:\n"
+                  "Benvenuto, scegli un'opzione:\n"
                   "1) Prenota viaggio;\n"
                   "2) Informazioni su un viaggio;\n"
                   "3) Esci.\n\n"
