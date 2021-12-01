@@ -13,5 +13,6 @@ Organizzazione contenuti:
 |  Algoritmi c++ Classroom 22/10/2021  |  "Classroom c++ 22-10-2021"  |
 |  Algoritmi c++ Classroom 05/11/2021  |  "Classroom c++ 05-11-2021"  |
 |  Algoritmi c++ Classroom 10/11/2021  |  "Classroom c++ 10-11-2021"  |
+|  Esercizi c++ sul for() 01-12-2021  |  "Esercizi c++ ciclo for() 01-12-2021"
 |  Algoritmi c++ AlgoBuild  |  "Esercizi algobuild c++"  |
 |  Esercizi vari  |  "Esercizi vari"  |
