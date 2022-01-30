@@ -6,6 +6,7 @@ Organizzazione contenuti:
 | :-------------: | :-------------: |
 |  ATM  |  "ATM"  |
 |  Prenotazione viaggi c++  |  "Prenotazione viaggi"  |
+|  Conto corrente c++  |  "Conto corrente"  |
 |  Rapisardi Shop c++  |  "Rapisardi shop"  |
 |  Algoritmi c++ Classroom 04/10/2021  |  "Classroom c++ 04-10-2021"  |
 |  Algoritmi c++ Classroom 08/10/2021  |  "Classroom c++ 08-10-2021"  |
