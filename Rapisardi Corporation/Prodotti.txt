@@ -1,0 +1,6 @@
+Galaxy S22;smartphone;32;799
+Iphone 13;smartphone;20;799
+Aspirapolvere Dyson;elettrodomestici;54;349
+Samsung Smart TV;casa;20;599
+PlayStation 5;gaming;7;599
+Stampante laser;ufficio;15;249
