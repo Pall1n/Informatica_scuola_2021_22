@@ -9,6 +9,7 @@ Organizzazione contenuti:
 |  Rapisardi Shop c++  |  "Rapisardi shop"  |
 |  Conto corrente c++  |  "Conto corrente"  |
 |  Palestra c++ |  "Rapisardi GYM"  |
+|  Rapisardi Corporation c++  | "Rapisardi Corporation"  |
 |  Algoritmi c++ Classroom 04/10/2021  |  "Classroom c++ 04-10-2021"  |
 |  Algoritmi c++ Classroom 08/10/2021  |  "Classroom c++ 08-10-2021"  |
 |  Algoritmi c++ Classroom 15/10/2021  |  "Classroom c++ 15-10-2021"  |
