@@ -92,13 +92,6 @@ class warehouse{
         return 0;
     }
     
-    bool verifica_categoria(string *categoria_ordinata, string categoria_inserita){
-        for(int i = 0; i < prodotti_length && categoria_ordinata[i] != ""; i++){
-            if(categoria_ordinata[i] == categoria_inserita) return true;
-        }
-        return false;
-    }
-    
     void cancella_elemento(int &indice){
         for(int i = indice; i < prodotti_length && codice[i] != -1; i++){
             codice[i] = codice[i+1];
