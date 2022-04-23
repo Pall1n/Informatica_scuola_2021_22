@@ -34,11 +34,11 @@ di una fattura tenuto conto che:
 using namespace std;
 
 void clear() {
-#ifdef _WIN32
+	#ifdef _WIN32
 	system("cls");
-#else
+	#else
 	system("clear");
-#endif
+	#endif
 }
 
 const string colore_reset = "\033[0m";
@@ -183,10 +183,10 @@ void risultati() {
 
 int main()
 {
-    while(!uscire){
-	    homepage();
-	    risultati();
-	    uscita();
-    }
+	while(!uscire){
+		homepage();
+		risultati();
+		uscita();
+	}
 	return 0;
 }
