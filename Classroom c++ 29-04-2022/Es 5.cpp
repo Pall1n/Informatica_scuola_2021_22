@@ -20,5 +20,5 @@ int main() {
 	cin >> stringa;
 	unsigned int length = stringa.length();
 	
-	cout << "\nLa stringa invertita è: " << inverti_stringa(stringa, length);
+	cout << "\nLa stringa invertita Ã¨: " << inverti_stringa(stringa, length);
 }
