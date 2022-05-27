@@ -1,5 +1,18 @@
 #include <iostream>
+#ifdef _WIN32
+#include <Windows.h>
+#else
+#include <unistd.h>
+#endif
 using namespace std;
+
+void clear(){
+    #ifdef _WIND32
+    system("cls");
+    #else
+    system("clear");
+    #endif
+}
 
 float calcolo_lordo(float ore, float paga_oraria) {
 	return ore * paga_oraria;
@@ -37,9 +50,9 @@ float calcolo_detrazioni_dipendente(float imponibile) {
 	}
 }
 
-float calcolo_detrazioni_familiari(int* figli) {
+float calcolo_detrazioni_familiari(unsigned short int *figli, int numero_figli) {
 	int tot = 0;
-	for (int i = 0; i < sizeof(figli) / sizeof(figli[0]); i++) {
+	for (int i = 0; i < numero_figli; i++) {
 		switch (i) {
 		case 0:
 			tot += 220;
@@ -51,6 +64,7 @@ float calcolo_detrazioni_familiari(int* figli) {
 			tot += 620;
 		}
 	}
+	return tot;
 }
 
 float calcolo_detrazione_coniuge(float imponibile) {
@@ -74,7 +88,48 @@ float calcolo_stipendio_netto(float imponibile, float totale_detrazioni) {
 }
 
 int main() {
-
-
+    float paga_oraria, ore;
+    cout<<"Inserisci paga oraria: ";
+    cin>>paga_oraria;
+    cout<<"Inserisci ore: ";
+    cin>>ore;
+    
+    float stipendio_lordo = calcolo_lordo(ore, paga_oraria);
+    float ritenute_previdenziali = calcolo_ritenute(stipendio_lordo);
+    float imponibile = calcolo_imponibile(stipendio_lordo, ritenute_previdenziali);
+    float imposta_lorda = calcolo_IRPEF(imponibile);
+    float detrazioni_dipendente = calcolo_detrazioni_dipendente(imponibile);
+    
+    int numero_figli;
+    float detrazioni_familiari;
+    clear();
+    cout<<"Numero figli: ";
+    cin>>numero_figli;
+    if(numero_figli == 0){
+        detrazioni_familiari = 0;
+    } else{
+        unsigned short int *figli = new unsigned short int[numero_figli];
+        detrazioni_familiari = calcolo_detrazioni_familiari(figli, numero_figli);
+        int scelta_temp;
+        for(int i = 0; i < numero_figli; i++){
+            clear();
+            
+            cout<<"Scelte:"<<
+              "\n1) Figlio minore di 3 anni"<<
+              "\n2) Figlio maggiore di 3 anni"<<
+              "\n3) Figlio con disabilità\n\n";
+              
+            cout<<"Figlio numero "<<i+1<<": ";
+            cin>>scelta_temp;
+            if(scelta_temp < 1 || scelta_temp > 3){
+                cout<<"\nScelta non valida, riprova!\n";
+                sleep(2);
+                i--;
+            } else{
+                figli[i] = scelta_temp;
+            }
+        }
+    }
+    
 	return 0;
 }
