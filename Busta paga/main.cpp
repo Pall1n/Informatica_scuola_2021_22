@@ -79,13 +79,20 @@ float calcolo_detrazione_coniuge(float imponibile) {
 	}
 }
 
-float somma_detrazioni(float aliquota, float irpef, float detrazioni_dipendente, float detrazioni_familiari, float detrazioni_coniuge) {
+float somma_detrazioni(float imposta_lorda, float irpef, float detrazioni_dipendente, float detrazioni_familiari, float detrazioni_coniuge) {
 	return aliquota + irpef + detrazioni_dipendente + detrazioni_familiari + detrazioni_coniuge;
 }
 
-float calcolo_stipendio_netto(float imponibile, float totale_detrazioni) {
-	return imponibile - totale_detrazioni;
+float calcolo_imposta_netta(float IRPEF, float totale_detrazioni) {
+    if(IRPEF < totale_detrazioni){
+        IRPEF = 0;
+    } else{
+        IRPEF -= totale_detrazioni;
+    }
+    return IRPEF;
 }
+
+float calcolo_stipendio_netto()
 
 int main() {
     float paga_oraria, ore;
@@ -109,7 +116,6 @@ int main() {
         detrazioni_familiari = 0;
     } else{
         unsigned short int *figli = new unsigned short int[numero_figli];
-        detrazioni_familiari = calcolo_detrazioni_familiari(figli, numero_figli);
         int scelta_temp;
         for(int i = 0; i < numero_figli; i++){
             clear();
@@ -129,7 +135,31 @@ int main() {
                 figli[i] = scelta_temp;
             }
         }
+        detrazioni_familiari = calcolo_detrazioni_familiari(figli, numero_figli);
     }
     
+    clear();
+    float detrazioni_coniuge = 0;
+    string scelta = "";
+    while(tolower(scelta) != "si" && tolower(scelta) != "no"){
+        cout<<"Hai un coniuge a carico? ";
+        cin>>scelta;
+        if(tolower(scelta) == "si"){
+            detrazioni_coniuge = calcolo_detrazione_coniuge(imponibile);
+        } else if(tolower(scelta) != "no"){
+            cout<<"\nScelta non valida, riprova!\n";
+            sleep(2);
+            clear();
+        }
+    }
+    
+    float somma_detrazioni = somma_detrazioni()
+    float imposta_netta = calcolo_imposta_netta(imposta_lorda, )
+    
+    
+    for(int i = 0; i < numero_figli){
+        figli[i] = nullptr;
+    }
+    delete[] figli;
 	return 0;
 }
