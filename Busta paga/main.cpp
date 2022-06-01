@@ -79,8 +79,8 @@ float calcolo_detrazione_coniuge(float imponibile) {
 	}
 }
 
-float somma_detrazioni(float imposta_lorda, float irpef, float detrazioni_dipendente, float detrazioni_familiari, float detrazioni_coniuge) {
-	return aliquota + irpef + detrazioni_dipendente + detrazioni_familiari + detrazioni_coniuge;
+float somma_detrazioni(float detrazioni_dipendente, float detrazioni_familiari, float detrazioni_coniuge){
+    return detrazioni_dipendente + detrazioni_familiari + detrazioni_coniuge;
 }
 
 float calcolo_imposta_netta(float IRPEF, float totale_detrazioni) {
@@ -92,7 +92,9 @@ float calcolo_imposta_netta(float IRPEF, float totale_detrazioni) {
     return IRPEF;
 }
 
-float calcolo_stipendio_netto()
+float calcolo_stipendio_netto(float imponibile, float imposta_netta){
+    return imponibile - imposta_netta;
+}
 
 int main() {
     float paga_oraria, ore;
@@ -141,25 +143,25 @@ int main() {
     clear();
     float detrazioni_coniuge = 0;
     string scelta = "";
-    while(tolower(scelta) != "si" && tolower(scelta) != "no"){
+    while(scelta != "si" && scelta != "Si" && scelta != "no" && scelta != "No"){
         cout<<"Hai un coniuge a carico? ";
         cin>>scelta;
-        if(tolower(scelta) == "si"){
+        if(scelta == "si" || scelta == "Si"){
             detrazioni_coniuge = calcolo_detrazione_coniuge(imponibile);
-        } else if(tolower(scelta) != "no"){
+        } else if(scelta != "no" || scelta != "No"){
             cout<<"\nScelta non valida, riprova!\n";
             sleep(2);
             clear();
         }
     }
     
-    float somma_detrazioni = somma_detrazioni()
-    float imposta_netta = calcolo_imposta_netta(imposta_lorda, )
+    float totale_detrazioni = somma_detrazioni(detrazioni_dipendente, detrazioni_familiari, detrazioni_coniuge);
+    float imposta_netta = calcolo_imposta_netta(imposta_lorda, totale_detrazioni);
+    float stipendio_netto = calcolo_stipendio_netto(imponibile, imposta_netta);
     
+    clear();
+    cout<<"L'imposta netta equivale a: "<<imposta_netta<<"€"<<endl<<
+          "Lo stipendio netto equivale a: "<<stipendio_netto<<"€";
     
-    for(int i = 0; i < numero_figli){
-        figli[i] = nullptr;
-    }
-    delete[] figli;
 	return 0;
 }
