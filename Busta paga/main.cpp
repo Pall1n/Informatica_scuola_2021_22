@@ -162,6 +162,5 @@ int main() {
     clear();
     cout<<"L'imposta netta equivale a: "<<imposta_netta<<"€"<<endl<<
           "Lo stipendio netto equivale a: "<<stipendio_netto<<"€";
-    
-	return 0;
+    return 0;
 }
