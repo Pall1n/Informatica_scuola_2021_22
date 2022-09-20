@@ -27,5 +27,6 @@ Organizzazione contenuti:
 |  Esercizi c++ Classroom 08/04/2022  |  "Classroom c++ 08-04-2022"  |
 |  Esercizi c++ Classroom 29/04/2022  |  "Classroom c++ 29-04-2022"  |
 |  Esercizi c++ Classroom 06/05/2022  |  "Classroom c++ 06-05-2022"  |
+|  Esercizi java Classroom 20/09/2022  |  "Classroom java 20-09-2022"  |
 |  Algoritmi c++ AlgoBuild  |  "Esercizi algobuild c++"  |
 |  Esercizi vari  |  "Esercizi vari"  |
