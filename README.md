@@ -1,4 +1,4 @@
-Personal scholastic exercises
+Personal scholastic exercises 2021-22
 
 IMPORTANTE: Tutti i programmi funzionano correttamente su ambiente linux (onlinegdb compila con gcc in ambiente linux). Se, pertanto, alcuni di essi non vengono compilati correttamente su ambiente non linux per motivi sintattici, compilarli con onlinegdb.com.
 
